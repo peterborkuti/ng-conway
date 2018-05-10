@@ -1,0 +1,21 @@
+.table {
+  border: solid orange;
+  border-spacing: 1px;
+  border-collapse: separate;
+  width: 100%;
+
+}
+
+.table td {
+  padding: 0px;
+  border: none;
+  border-spacing: 0px;
+}
+
+.cell-live {
+  background-color: green;
+}
+
+.cell-dead {
+  background-color: black;
+}

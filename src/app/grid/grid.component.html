@@ -1,3 +1,9 @@
-<p>
-  grid works!
-</p>
+<table class="table table-bordered">
+
+  <tr *ngFor="let gridRow of grid.grid; let r = index">
+    <td *ngFor="let gridCell of gridRow; let c = index" [ngStyle]="{'width': getWidth()}">
+      <div (click)="switchCell(r, c)" [ngClass]="getCSSClass(r, c)">&nbsp;</div>
+    </td>
+  </tr>
+
+</table>
