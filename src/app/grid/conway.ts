@@ -1,27 +1,50 @@
 import { Grid } from './grid';
+import { TimerSingleton } from './timer';
 
-export class Conway {
-  constructor (public readonly grid: Grid) {
+export function NewCellValue(isAlive: boolean, neighbours: number): boolean {
+  if (!isAlive && neighbours === 3) {
+    return true;
   }
 
-  public setCell(r: number, c: number, neighbours: number) {
-    switch (neighbours) {
-      case 0:
-      case 1:
-        this.grid.
-    }
+  if (!isAlive) { return false; }
+
+  if (neighbours < 2 || neighbours > 3) {
+    return false;
+  }
+
+  return isAlive;
+}
+
+export class Conway {
+  constructor (public grid: Grid) {
+  }
+
+  startIterate(timeout: number) {
+    const callBack = this.iterate.bind(this);
+    TimerSingleton.Instance.repeat('conway', timeout, callBack);
+  }
+
+  stopIterate() {
+    TimerSingleton.Instance.stop('conway');
   }
 
   public iterate() {
+    console.log('Iterate');
+    const newGrid = new Grid(this.grid.rows, this.grid.cols);
     for (let r = 0; r < this.grid.rows; r++) {
       for (let c = 0; c < this.grid.cols; c++) {
         const numNeighbours = this.grid.numberOfLiveNeighbours(r, c);
-        switch (numNeighbours) {
-          case 0:
-          case 1:
-            this.grid.
-        }
+
+        const isAlive = this.grid.getCell(r, c);
+
+        newGrid.setCell(r, c, NewCellValue(isAlive, numNeighbours));
       }
     }
+
+    if (this.grid.equals(newGrid)) {
+      this.stopIterate();
+    }
+
+    this.grid.setWithGrid(newGrid);
   }
 }

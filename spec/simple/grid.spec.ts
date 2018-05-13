@@ -1,4 +1,5 @@
 import { Grid } from '../../src/app/grid/grid';
+import { createGrid } from './utils';
 
 describe('constructor', () => {
   it('should set rows and cols to 10 by default', () => {
@@ -72,6 +73,7 @@ describe('switchCell', () => {
     expect(grid.getCell(0, 0)).toBeFalsy();
   });
 });
+
 describe('getCell', () => {
   const grid = new Grid(1, 1);
 
@@ -90,5 +92,32 @@ describe('getCell', () => {
     grid.setCell(0, 0, true);
 
     expect(grid.getCell(0, 0)).toBeTruthy();
+  });
+});
+
+describe('numberOfLiveNeighbours', () => {
+  it('should work for 10|01', () => {
+    const grid = createGrid(2, 2, '10|01');
+
+    expect(grid.numberOfLiveNeighbours(0, 0)).toBe(1);
+    expect(grid.numberOfLiveNeighbours(0, 1)).toBe(2);
+    expect(grid.numberOfLiveNeighbours(1, 0)).toBe(2);
+    expect(grid.numberOfLiveNeighbours(1, 1)).toBe(1);
+  });
+  it('should work for 10|11', () => {
+    const grid = createGrid(2, 2, '10|11');
+
+    expect(grid.numberOfLiveNeighbours(0, 0)).toBe(2);
+    expect(grid.numberOfLiveNeighbours(0, 1)).toBe(3);
+    expect(grid.numberOfLiveNeighbours(1, 0)).toBe(2);
+    expect(grid.numberOfLiveNeighbours(1, 1)).toBe(2);
+  });
+  it('should work for 01|00', () => {
+    const grid = createGrid(2, 2, '01|00');
+
+    expect(grid.numberOfLiveNeighbours(0, 0)).toBe(1);
+    expect(grid.numberOfLiveNeighbours(0, 1)).toBe(0);
+    expect(grid.numberOfLiveNeighbours(1, 0)).toBe(1);
+    expect(grid.numberOfLiveNeighbours(1, 1)).toBe(1);
   });
 });
