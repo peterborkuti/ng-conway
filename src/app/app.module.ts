@@ -3,14 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { GridComponent } from './grid/grid.component';
+import { IterationSpeedComponent } from './iteration-speed/iteration-speed.component';
+
+import { MatSliderModule } from '@angular/material/slider';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    GridComponent
+    GridComponent,
+    IterationSpeedComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
