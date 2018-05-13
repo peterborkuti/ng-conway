@@ -6,7 +6,7 @@ import { GridComponent } from './grid/grid.component';
 import { IterationSpeedComponent } from './iteration-speed/iteration-speed.component';
 
 import { MatSliderModule } from '@angular/material/slider';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { MatSliderModule } from '@angular/material/slider';
     IterationSpeedComponent
   ],
   imports: [
-    BrowserModule, MatSliderModule
+    BrowserModule, MatSliderModule, BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
