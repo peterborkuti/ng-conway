@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {MatSliderModule} from '@angular/material/slider';
 
 @Component({
   selector: 'app-iteration-speed',
@@ -7,6 +6,7 @@ import {MatSliderModule} from '@angular/material/slider';
   styleUrls: ['./iteration-speed.component.css']
 })
 export class IterationSpeedComponent implements OnInit {
+  value = 1000;
 
   constructor() { }
 
@@ -23,6 +23,10 @@ export class IterationSpeedComponent implements OnInit {
     }
 
     return value;
+  }
+
+  hmmm(event) {
+    console.log(event);
   }
 
 }
