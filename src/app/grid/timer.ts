@@ -3,9 +3,6 @@ class Timer {
 }
 
 export class TimerSingleton {
-    private static readonly REPEAT = false;
-    private static readonly ONCE = true;
-
     private static _instance: TimerSingleton = new TimerSingleton();
     private timers = {};
 
@@ -15,18 +12,12 @@ export class TimerSingleton {
         return TimerSingleton._instance;
     }
 
-    private timerOnce(timerId: string, callBack: () => void) {
-      delete this.timers[timerId];
-
-      callBack();
-    }
-
     public repeat(timerId: string, intervalInMillis: number, callBack: () => void) {
-      this.startTimer(timerId, intervalInMillis, callBack, TimerSingleton.REPEAT);
+      this.startTimer(timerId, intervalInMillis, callBack);
     }
 
     public once(timerId: string, intervalInMillis: number, callBack: () => void) {
-      this.startTimer(timerId, intervalInMillis, callBack, TimerSingleton.ONCE);
+      this.startTimer(timerId, intervalInMillis, callBack, true);
     }
 
     private startTimer(timerId: string, intervalInMillis: number, callBack: () => void, once = false) {
@@ -34,7 +25,7 @@ export class TimerSingleton {
         let jsTimerId;
 
         if (once) {
-          const wrappedCallBack = this.timerOnce.bind(this, timerId, callBack);
+          const wrappedCallBack = () => (delete this.timers[timerId], callBack());
 
           jsTimerId = setTimeout(wrappedCallBack, intervalInMillis);
         } else {
