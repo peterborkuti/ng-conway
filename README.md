@@ -1,6 +1,6 @@
 # NgConway
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
 ## Development server
 
@@ -17,8 +17,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-*I made tests without karma. Install jasmine-ts and `npm test`. Tests for pure js classes are in the spec folder.*
 
 ## Running end-to-end tests
 
