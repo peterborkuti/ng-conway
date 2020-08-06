@@ -35,8 +35,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _grid_grid_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./grid/grid.component */ "./src/app/grid/grid.component.ts");
-/* harmony import */ var _iteration_speed_iteration_speed_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./iteration-speed/iteration-speed.component */ "./src/app/iteration-speed/iteration-speed.component.ts");
-
 
 
 
@@ -46,16 +44,15 @@ class AppComponent {
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 4, vars: 1, consts: [["cols", "30", "rows", "20"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 3, vars: 1, consts: [["cols", "30", "rows", "20"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h1");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "app-grid", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "app-iteration-speed");
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" Welcome to ", ctx.title, "! ");
-    } }, directives: [_grid_grid_component__WEBPACK_IMPORTED_MODULE_1__["GridComponent"], _iteration_speed_iteration_speed_component__WEBPACK_IMPORTED_MODULE_2__["IterationSpeedComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"] });
+    } }, directives: [_grid_grid_component__WEBPACK_IMPORTED_MODULE_1__["GridComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -200,6 +197,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _conway__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./conway */ "./src/app/grid/conway.ts");
 /* harmony import */ var _timer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./timer */ "./src/app/grid/timer.ts");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _iteration_speed_iteration_speed_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../iteration-speed/iteration-speed.component */ "./src/app/iteration-speed/iteration-speed.component.ts");
+
 
 
 
@@ -209,8 +208,8 @@ __webpack_require__.r(__webpack_exports__);
 const _c0 = function (a0) { return { "width": a0 }; };
 function GridComponent_tr_1_td_1_Template(rf, ctx) { if (rf & 1) {
     const _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 5);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function GridComponent_tr_1_td_1_Template_div_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r8); const c_r5 = ctx.index; const r_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().index; const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r6.switchCell(r_r2, c_r5); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "\u00A0");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -225,7 +224,7 @@ function GridComponent_tr_1_td_1_Template(rf, ctx) { if (rf & 1) {
 } }
 function GridComponent_tr_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, GridComponent_tr_1_td_1_Template, 3, 4, "td", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, GridComponent_tr_1_td_1_Template, 3, 4, "td", 3);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const gridRow_r1 = ctx.$implicit;
@@ -245,11 +244,14 @@ class GridComponent {
         this.conway.startIterate(this.waitMillisBetweenIterations);
     }
     switchCell(r, c) {
+        this.restartTimer();
+        this.grid.switchCell(r, c);
+    }
+    restartTimer() {
         this.conway.stopIterate();
         _timer__WEBPACK_IMPORTED_MODULE_3__["TimerSingleton"].Instance.stop('startConwayIteration');
         const startIterate = this.conway.startIterate.bind(this.conway, this.waitMillisBetweenIterations);
         _timer__WEBPACK_IMPORTED_MODULE_3__["TimerSingleton"].Instance.once('startConwayIteration', this.waitMillisAfterSwitchCell, startIterate);
-        this.grid.switchCell(r, c);
     }
     getCSSClass(r, c) {
         return (this.grid.getCell(r, c) ? 'cell-live' : 'cell-dead');
@@ -257,16 +259,24 @@ class GridComponent {
     getWidth() {
         return (100.0 / this.cols) + '%';
     }
+    speedChanged(speed) {
+        this.waitMillisBetweenIterations = speed;
+        this.restartTimer();
+        console.log(speed);
+    }
 }
 GridComponent.ɵfac = function GridComponent_Factory(t) { return new (t || GridComponent)(); };
-GridComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: GridComponent, selectors: [["app-grid"]], inputs: { rows: "rows", cols: "cols", waitMillisAfterSwitchCell: "waitMillisAfterSwitchCell", waitMillisBetweenIterations: "waitMillisBetweenIterations" }, decls: 2, vars: 1, consts: [[1, "table", "table-bordered"], [4, "ngFor", "ngForOf"], [3, "ngStyle", 4, "ngFor", "ngForOf"], [3, "ngStyle"], [3, "ngClass", "click"]], template: function GridComponent_Template(rf, ctx) { if (rf & 1) {
+GridComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: GridComponent, selectors: [["app-grid"]], inputs: { rows: "rows", cols: "cols", waitMillisAfterSwitchCell: "waitMillisAfterSwitchCell", waitMillisBetweenIterations: "waitMillisBetweenIterations" }, decls: 3, vars: 1, consts: [[1, "table", "table-bordered"], [4, "ngFor", "ngForOf"], [3, "speedChange"], [3, "ngStyle", 4, "ngFor", "ngForOf"], [3, "ngStyle"], [3, "ngClass", "click"]], template: function GridComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "table", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, GridComponent_tr_1_Template, 2, 1, "tr", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "app-iteration-speed", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("speedChange", function GridComponent_Template_app_iteration_speed_speedChange_2_listener($event) { return ctx.speedChanged($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.grid.grid);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgClass"]], styles: [".table[_ngcontent-%COMP%] {\n  border: solid orange;\n  border-spacing: 1px;\n  border-collapse: separate;\n  width: 100%;\n\n}\n\n.table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  padding: 0px;\n  border: none;\n  border-spacing: 0px;\n}\n\n.cell-live[_ngcontent-%COMP%] {\n  background-color: green;\n}\n\n.cell-dead[_ngcontent-%COMP%] {\n  background-color: black;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ3JpZC9ncmlkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxvQkFBb0I7RUFDcEIsbUJBQW1CO0VBQ25CLHlCQUF5QjtFQUN6QixXQUFXOztBQUViOztBQUVBO0VBQ0UsWUFBWTtFQUNaLFlBQVk7RUFDWixtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSx1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSx1QkFBdUI7QUFDekIiLCJmaWxlIjoic3JjL2FwcC9ncmlkL2dyaWQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50YWJsZSB7XG4gIGJvcmRlcjogc29saWQgb3JhbmdlO1xuICBib3JkZXItc3BhY2luZzogMXB4O1xuICBib3JkZXItY29sbGFwc2U6IHNlcGFyYXRlO1xuICB3aWR0aDogMTAwJTtcblxufVxuXG4udGFibGUgdGQge1xuICBwYWRkaW5nOiAwcHg7XG4gIGJvcmRlcjogbm9uZTtcbiAgYm9yZGVyLXNwYWNpbmc6IDBweDtcbn1cblxuLmNlbGwtbGl2ZSB7XG4gIGJhY2tncm91bmQtY29sb3I6IGdyZWVuO1xufVxuXG4uY2VsbC1kZWFkIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG59XG4iXX0= */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], _iteration_speed_iteration_speed_component__WEBPACK_IMPORTED_MODULE_5__["IterationSpeedComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgClass"]], styles: [".table[_ngcontent-%COMP%] {\n  border: solid orange;\n  border-spacing: 1px;\n  border-collapse: separate;\n  width: 100%;\n\n}\n\n.table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  padding: 0px;\n  border: none;\n  border-spacing: 0px;\n}\n\n.cell-live[_ngcontent-%COMP%] {\n  background-color: green;\n}\n\n.cell-dead[_ngcontent-%COMP%] {\n  background-color: black;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ3JpZC9ncmlkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxvQkFBb0I7RUFDcEIsbUJBQW1CO0VBQ25CLHlCQUF5QjtFQUN6QixXQUFXOztBQUViOztBQUVBO0VBQ0UsWUFBWTtFQUNaLFlBQVk7RUFDWixtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSx1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSx1QkFBdUI7QUFDekIiLCJmaWxlIjoic3JjL2FwcC9ncmlkL2dyaWQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50YWJsZSB7XG4gIGJvcmRlcjogc29saWQgb3JhbmdlO1xuICBib3JkZXItc3BhY2luZzogMXB4O1xuICBib3JkZXItY29sbGFwc2U6IHNlcGFyYXRlO1xuICB3aWR0aDogMTAwJTtcblxufVxuXG4udGFibGUgdGQge1xuICBwYWRkaW5nOiAwcHg7XG4gIGJvcmRlcjogbm9uZTtcbiAgYm9yZGVyLXNwYWNpbmc6IDBweDtcbn1cblxuLmNlbGwtbGl2ZSB7XG4gIGJhY2tncm91bmQtY29sb3I6IGdyZWVuO1xufVxuXG4uY2VsbC1kZWFkIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG59XG4iXX0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](GridComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -462,6 +472,7 @@ __webpack_require__.r(__webpack_exports__);
 class IterationSpeedComponent {
     constructor() {
         this.value = 1000;
+        this.speedChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
     }
     ngOnInit() {
     }
@@ -474,14 +485,15 @@ class IterationSpeedComponent {
         }
         return value;
     }
-    hmmm(event) {
+    onChange(event) {
         console.log(event);
+        this.speedChange.emit(event.value);
     }
 }
 IterationSpeedComponent.ɵfac = function IterationSpeedComponent_Factory(t) { return new (t || IterationSpeedComponent)(); };
-IterationSpeedComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: IterationSpeedComponent, selectors: [["app-iteration-speed"]], decls: 1, vars: 1, consts: [["thumbLabel", "", "tickInterval", "100", "min", "100", "max", "5000", "value", "1000", 3, "displayWith", "input"]], template: function IterationSpeedComponent_Template(rf, ctx) { if (rf & 1) {
+IterationSpeedComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: IterationSpeedComponent, selectors: [["app-iteration-speed"]], outputs: { speedChange: "speedChange" }, decls: 1, vars: 1, consts: [["thumbLabel", "", "tickInterval", "100", "min", "100", "max", "5000", "value", "1000", 3, "displayWith", "change"]], template: function IterationSpeedComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-slider", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("input", function IterationSpeedComponent_Template_mat_slider_input_0_listener() { return ctx.value; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("change", function IterationSpeedComponent_Template_mat_slider_change_0_listener($event) { return ctx.onChange($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("displayWith", ctx.formatLabel);
@@ -493,7 +505,9 @@ IterationSpeedComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
                 templateUrl: './iteration-speed.component.html',
                 styleUrls: ['./iteration-speed.component.css']
             }]
-    }], function () { return []; }, null); })();
+    }], function () { return []; }, { speedChange: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }] }); })();
 
 
 /***/ }),
