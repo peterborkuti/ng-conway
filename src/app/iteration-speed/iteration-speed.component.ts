@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { MatSliderChange } from '@angular/material/slider';
 
 @Component({
   selector: 'app-iteration-speed',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IterationSpeedComponent implements OnInit {
   value = 1000;
+
+  @Output() speedChange = new EventEmitter<number>();
 
   constructor() { }
 
@@ -25,8 +28,9 @@ export class IterationSpeedComponent implements OnInit {
     return value;
   }
 
-  hmmm(event) {
+  onChange(event: MatSliderChange) {
     console.log(event);
+    this.speedChange.emit(event.value);
   }
 
 }

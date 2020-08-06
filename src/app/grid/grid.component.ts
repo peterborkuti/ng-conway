@@ -27,6 +27,12 @@ export class GridComponent implements OnInit {
   }
 
   switchCell(r: number, c: number) {
+    this.restartTimer();
+
+    this.grid.switchCell(r, c);
+  }
+
+  restartTimer() {
     this.conway.stopIterate();
 
     TimerSingleton.Instance.stop('startConwayIteration');
@@ -34,8 +40,6 @@ export class GridComponent implements OnInit {
     const startIterate = this.conway.startIterate.bind(this.conway, this.waitMillisBetweenIterations);
 
     TimerSingleton.Instance.once('startConwayIteration', this.waitMillisAfterSwitchCell, startIterate);
-
-    this.grid.switchCell(r, c);
   }
 
   getCSSClass(r: number, c: number) {
@@ -44,6 +48,12 @@ export class GridComponent implements OnInit {
 
   getWidth(): string {
     return (100.0 / this.cols) + '%';
+  }
+
+  speedChanged(speed: number) {
+    this.waitMillisBetweenIterations = speed;
+    this.restartTimer();
+    console.log(speed);
   }
 
 }
