@@ -82,6 +82,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _grid_grid_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./grid/grid.component */ "./src/app/grid/grid.component.ts");
 /* harmony import */ var _iteration_speed_iteration_speed_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./iteration-speed/iteration-speed.component */ "./src/app/iteration-speed/iteration-speed.component.ts");
 /* harmony import */ var _angular_material_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/slider */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/slider.js");
+/* harmony import */ var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/progress-bar */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js");
+
 
 
 
@@ -96,13 +98,15 @@ AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule
 AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [], imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
-            _angular_material_slider__WEBPACK_IMPORTED_MODULE_6__["MatSliderModule"]
+            _angular_material_slider__WEBPACK_IMPORTED_MODULE_6__["MatSliderModule"],
+            _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_7__["MatProgressBarModule"]
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
         _grid_grid_component__WEBPACK_IMPORTED_MODULE_4__["GridComponent"],
         _iteration_speed_iteration_speed_component__WEBPACK_IMPORTED_MODULE_5__["IterationSpeedComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
         _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
-        _angular_material_slider__WEBPACK_IMPORTED_MODULE_6__["MatSliderModule"]] }); })();
+        _angular_material_slider__WEBPACK_IMPORTED_MODULE_6__["MatSliderModule"],
+        _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_7__["MatProgressBarModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
@@ -114,7 +118,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                     _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
-                    _angular_material_slider__WEBPACK_IMPORTED_MODULE_6__["MatSliderModule"]
+                    _angular_material_slider__WEBPACK_IMPORTED_MODULE_6__["MatSliderModule"],
+                    _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_7__["MatProgressBarModule"]
                 ],
                 providers: [],
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
@@ -198,6 +203,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _timer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./timer */ "./src/app/grid/timer.ts");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 /* harmony import */ var _iteration_speed_iteration_speed_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../iteration-speed/iteration-speed.component */ "./src/app/iteration-speed/iteration-speed.component.ts");
+/* harmony import */ var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/progress-bar */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js");
+
 
 
 
@@ -207,36 +214,44 @@ __webpack_require__.r(__webpack_exports__);
 
 const _c0 = function (a0) { return { "width": a0 }; };
 function GridComponent_tr_1_td_1_Template(rf, ctx) { if (rf & 1) {
-    const _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function GridComponent_tr_1_td_1_Template_div_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r8); const c_r5 = ctx.index; const r_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().index; const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r6.switchCell(r_r2, c_r5); });
+    const _r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function GridComponent_tr_1_td_1_Template_div_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r9); const c_r6 = ctx.index; const r_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().index; const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r7.switchCell(r_r3, c_r6); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "\u00A0");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const c_r5 = ctx.index;
-    const r_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().index;
-    const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](2, _c0, ctx_r3.getWidth()));
+    const c_r6 = ctx.index;
+    const r_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().index;
+    const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](2, _c0, ctx_r4.getWidth()));
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", ctx_r3.getCSSClass(r_r2, c_r5));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", ctx_r4.getCSSClass(r_r3, c_r6));
 } }
 function GridComponent_tr_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, GridComponent_tr_1_td_1_Template, 3, 4, "td", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, GridComponent_tr_1_td_1_Template, 3, 4, "td", 4);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const gridRow_r1 = ctx.$implicit;
+    const gridRow_r2 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", gridRow_r1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", gridRow_r2);
+} }
+function GridComponent_mat_progress_bar_3_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "mat-progress-bar", 7);
+} if (rf & 2) {
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", ctx_r1.progressValue);
 } }
 class GridComponent {
-    constructor() {
+    constructor(zone) {
+        this.zone = zone;
         this.rows = 10;
         this.cols = 10;
-        this.waitMillisAfterSwitchCell = 1000;
+        this.waitMillisAfterSwitchCell = 3000;
         this.waitMillisBetweenIterations = 1000;
+        this.progressValue = 0;
     }
     ngOnInit() {
         this.grid = new _grid__WEBPACK_IMPORTED_MODULE_1__["Grid"](this.rows, this.cols);
@@ -244,14 +259,26 @@ class GridComponent {
         this.conway.startIterate(this.waitMillisBetweenIterations);
     }
     switchCell(r, c) {
-        this.restartTimer();
+        this.restartTimer(true);
         this.grid.switchCell(r, c);
+        this.setupProgressBar();
     }
-    restartTimer() {
+    setupProgressBar() {
+        _timer__WEBPACK_IMPORTED_MODULE_3__["TimerSingleton"].Instance.stop('progressBar');
+        this.progressValue = 100;
+        const progressTicksNumber = Math.floor(this.waitMillisAfterSwitchCell / 1000.0);
+        const progressValueDelta = 100.0 / progressTicksNumber;
+        const progressTicksMillis = Math.floor(this.waitMillisAfterSwitchCell / progressTicksNumber);
+        _timer__WEBPACK_IMPORTED_MODULE_3__["TimerSingleton"].Instance.repeatNTimes('progressBar', progressTicksNumber, progressTicksMillis, () => {
+            this.progressValue -= progressValueDelta;
+            console.log(this.progressValue);
+        });
+    }
+    restartTimer(waitBeforeStart = false) {
         this.conway.stopIterate();
         _timer__WEBPACK_IMPORTED_MODULE_3__["TimerSingleton"].Instance.stop('startConwayIteration');
         const startIterate = this.conway.startIterate.bind(this.conway, this.waitMillisBetweenIterations);
-        _timer__WEBPACK_IMPORTED_MODULE_3__["TimerSingleton"].Instance.once('startConwayIteration', this.waitMillisAfterSwitchCell, startIterate);
+        _timer__WEBPACK_IMPORTED_MODULE_3__["TimerSingleton"].Instance.once('startConwayIteration', waitBeforeStart ? this.waitMillisAfterSwitchCell : 0, startIterate);
     }
     getCSSClass(r, c) {
         return (this.grid.getCell(r, c) ? 'cell-live' : 'cell-dead');
@@ -265,18 +292,21 @@ class GridComponent {
         console.log(speed);
     }
 }
-GridComponent.ɵfac = function GridComponent_Factory(t) { return new (t || GridComponent)(); };
-GridComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: GridComponent, selectors: [["app-grid"]], inputs: { rows: "rows", cols: "cols", waitMillisAfterSwitchCell: "waitMillisAfterSwitchCell", waitMillisBetweenIterations: "waitMillisBetweenIterations" }, decls: 3, vars: 1, consts: [[1, "table", "table-bordered"], [4, "ngFor", "ngForOf"], [3, "speedChange"], [3, "ngStyle", 4, "ngFor", "ngForOf"], [3, "ngStyle"], [3, "ngClass", "click"]], template: function GridComponent_Template(rf, ctx) { if (rf & 1) {
+GridComponent.ɵfac = function GridComponent_Factory(t) { return new (t || GridComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"])); };
+GridComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: GridComponent, selectors: [["app-grid"]], inputs: { rows: "rows", cols: "cols", waitMillisAfterSwitchCell: "waitMillisAfterSwitchCell", waitMillisBetweenIterations: "waitMillisBetweenIterations" }, decls: 4, vars: 2, consts: [[1, "table", "table-bordered"], [4, "ngFor", "ngForOf"], [3, "speedChange"], ["mode", "determinate", 3, "value", 4, "ngIf"], [3, "ngStyle", 4, "ngFor", "ngForOf"], [3, "ngStyle"], [3, "ngClass", "click"], ["mode", "determinate", 3, "value"]], template: function GridComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "table", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, GridComponent_tr_1_Template, 2, 1, "tr", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "app-iteration-speed", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("speedChange", function GridComponent_Template_app_iteration_speed_speedChange_2_listener($event) { return ctx.speedChanged($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, GridComponent_mat_progress_bar_3_Template, 1, 1, "mat-progress-bar", 3);
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.grid.grid);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], _iteration_speed_iteration_speed_component__WEBPACK_IMPORTED_MODULE_5__["IterationSpeedComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgClass"]], styles: [".table[_ngcontent-%COMP%] {\n  border: solid orange;\n  border-spacing: 1px;\n  border-collapse: separate;\n  width: 100%;\n\n}\n\n.table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  padding: 0px;\n  border: none;\n  border-spacing: 0px;\n}\n\n.cell-live[_ngcontent-%COMP%] {\n  background-color: green;\n}\n\n.cell-dead[_ngcontent-%COMP%] {\n  background-color: black;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ3JpZC9ncmlkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxvQkFBb0I7RUFDcEIsbUJBQW1CO0VBQ25CLHlCQUF5QjtFQUN6QixXQUFXOztBQUViOztBQUVBO0VBQ0UsWUFBWTtFQUNaLFlBQVk7RUFDWixtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSx1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSx1QkFBdUI7QUFDekIiLCJmaWxlIjoic3JjL2FwcC9ncmlkL2dyaWQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50YWJsZSB7XG4gIGJvcmRlcjogc29saWQgb3JhbmdlO1xuICBib3JkZXItc3BhY2luZzogMXB4O1xuICBib3JkZXItY29sbGFwc2U6IHNlcGFyYXRlO1xuICB3aWR0aDogMTAwJTtcblxufVxuXG4udGFibGUgdGQge1xuICBwYWRkaW5nOiAwcHg7XG4gIGJvcmRlcjogbm9uZTtcbiAgYm9yZGVyLXNwYWNpbmc6IDBweDtcbn1cblxuLmNlbGwtbGl2ZSB7XG4gIGJhY2tncm91bmQtY29sb3I6IGdyZWVuO1xufVxuXG4uY2VsbC1kZWFkIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG59XG4iXX0= */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.progressValue > 0);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], _iteration_speed_iteration_speed_component__WEBPACK_IMPORTED_MODULE_5__["IterationSpeedComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgClass"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_6__["MatProgressBar"]], styles: [".table[_ngcontent-%COMP%] {\n  border: solid orange;\n  border-spacing: 1px;\n  border-collapse: separate;\n  width: 100%;\n\n}\n\n.table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  padding: 0px;\n  border: none;\n  border-spacing: 0px;\n}\n\n.cell-live[_ngcontent-%COMP%] {\n  background-color: green;\n}\n\n.cell-dead[_ngcontent-%COMP%] {\n  background-color: black;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ3JpZC9ncmlkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxvQkFBb0I7RUFDcEIsbUJBQW1CO0VBQ25CLHlCQUF5QjtFQUN6QixXQUFXOztBQUViOztBQUVBO0VBQ0UsWUFBWTtFQUNaLFlBQVk7RUFDWixtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSx1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSx1QkFBdUI7QUFDekIiLCJmaWxlIjoic3JjL2FwcC9ncmlkL2dyaWQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50YWJsZSB7XG4gIGJvcmRlcjogc29saWQgb3JhbmdlO1xuICBib3JkZXItc3BhY2luZzogMXB4O1xuICBib3JkZXItY29sbGFwc2U6IHNlcGFyYXRlO1xuICB3aWR0aDogMTAwJTtcblxufVxuXG4udGFibGUgdGQge1xuICBwYWRkaW5nOiAwcHg7XG4gIGJvcmRlcjogbm9uZTtcbiAgYm9yZGVyLXNwYWNpbmc6IDBweDtcbn1cblxuLmNlbGwtbGl2ZSB7XG4gIGJhY2tncm91bmQtY29sb3I6IGdyZWVuO1xufVxuXG4uY2VsbC1kZWFkIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG59XG4iXX0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](GridComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -284,7 +314,7 @@ GridComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
                 templateUrl: './grid.component.html',
                 styleUrls: ['./grid.component.css']
             }]
-    }], function () { return []; }, { rows: [{
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"] }]; }, { rows: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }], cols: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
@@ -404,9 +434,9 @@ class Grid {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimerSingleton", function() { return TimerSingleton; });
 class Timer {
-    constructor(jsTimerId, once = false) {
+    constructor(jsTimerId, fireNumber = -1) {
         this.jsTimerId = jsTimerId;
-        this.once = once;
+        this.fireNumber = fireNumber;
     }
 }
 class TimerSingleton {
@@ -417,34 +447,43 @@ class TimerSingleton {
         return TimerSingleton._instance;
     }
     repeat(timerId, intervalInMillis, callBack) {
-        this.startTimer(timerId, intervalInMillis, callBack);
+        this.startTimer(timerId, intervalInMillis, callBack, -1);
+    }
+    repeatNTimes(timerId, n, intervalInMillis, callBack) {
+        this.startTimer(timerId, intervalInMillis, callBack, n);
     }
     once(timerId, intervalInMillis, callBack) {
-        this.startTimer(timerId, intervalInMillis, callBack, true);
+        this.startTimer(timerId, intervalInMillis, callBack, 1);
     }
-    startTimer(timerId, intervalInMillis, callBack, once = false) {
-        if (!this.timers[timerId]) {
-            let jsTimerId;
-            if (once) {
-                const wrappedCallBack = () => (delete this.timers[timerId], callBack());
-                jsTimerId = setTimeout(wrappedCallBack, intervalInMillis);
-            }
-            else {
-                jsTimerId = setInterval(callBack, intervalInMillis);
-            }
-            this.timers[timerId] = new Timer(jsTimerId, once);
+    startTimer(timerId, intervalInMillis, callBack, number = -1) {
+        if (this.timers[timerId]) {
+            this.stop(timerId);
         }
+        const wrappedCallBack = () => {
+            const timer = this.timers[timerId];
+            if (!timer)
+                return;
+            if (timer.fireNumber > -1) {
+                timer.fireNumber--;
+            }
+            if (timer.fireNumber === 0) {
+                this.stop(timerId);
+            }
+            callBack();
+        };
+        let jsTimerId;
+        if (number > 0) {
+            jsTimerId = setInterval(wrappedCallBack, intervalInMillis);
+        }
+        else {
+            jsTimerId = setInterval(callBack, intervalInMillis);
+        }
+        this.timers[timerId] = new Timer(jsTimerId, number);
     }
     stop(timerId) {
         if (this.timers[timerId]) {
             const jsTimerId = this.timers[timerId].jsTimerId;
-            const once = this.timers[timerId].once;
-            if (once) {
-                clearTimeout(jsTimerId);
-            }
-            else {
-                clearInterval(jsTimerId);
-            }
+            clearInterval(jsTimerId);
             delete this.timers[timerId];
         }
     }
@@ -491,7 +530,7 @@ class IterationSpeedComponent {
     }
 }
 IterationSpeedComponent.ɵfac = function IterationSpeedComponent_Factory(t) { return new (t || IterationSpeedComponent)(); };
-IterationSpeedComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: IterationSpeedComponent, selectors: [["app-iteration-speed"]], outputs: { speedChange: "speedChange" }, decls: 1, vars: 1, consts: [["thumbLabel", "", "tickInterval", "100", "min", "100", "max", "5000", "value", "1000", 3, "displayWith", "change"]], template: function IterationSpeedComponent_Template(rf, ctx) { if (rf & 1) {
+IterationSpeedComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: IterationSpeedComponent, selectors: [["app-iteration-speed"]], outputs: { speedChange: "speedChange" }, decls: 1, vars: 1, consts: [["thumbLabel", "", "tickInterval", "10", "min", "10", "max", "1000", "value", "200", 3, "displayWith", "change"]], template: function IterationSpeedComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-slider", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("change", function IterationSpeedComponent_Template_mat_slider_change_0_listener($event) { return ctx.onChange($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
