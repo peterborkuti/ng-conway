@@ -74,4 +74,14 @@ describe('TimerSingleton', () => {
     jasmine.clock().tick(202);
     expect(timerCallback.calls.count()).toEqual(1);
   });
+  it('should call times 3', () => {
+    const timer = TimerSingleton.Instance;
+
+    timer.repeatNTimes('timeid5', 3, 100, function() {timerCallback(); });
+
+    expect(timerCallback).not.toHaveBeenCalled();
+
+    jasmine.clock().tick(303);
+    expect(timerCallback.calls.count()).toEqual(3);
+  });
 });

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, NgZone } from '@angular/core';
 import { Grid } from './grid';
 import { Conway } from './conway';
 import { TimerSingleton } from './timer';
@@ -11,13 +11,14 @@ import { TimerSingleton } from './timer';
 export class GridComponent implements OnInit {
   @Input() rows = 10;
   @Input() cols = 10;
-  @Input() waitMillisAfterSwitchCell = 1000;
+  @Input() waitMillisAfterSwitchCell = 3000;
   @Input() waitMillisBetweenIterations = 1000;
 
   public grid: Grid;
+  public progressValue = 0;
   private conway: Conway;
 
-  constructor() { }
+  constructor(private zone: NgZone) { }
 
   ngOnInit() {
     this.grid = new Grid(this.rows, this.cols);
@@ -27,19 +28,37 @@ export class GridComponent implements OnInit {
   }
 
   switchCell(r: number, c: number) {
-    this.restartTimer();
+    this.restartTimer(true);
 
     this.grid.switchCell(r, c);
+
+    this.setupProgressBar();
   }
 
-  restartTimer() {
+  private setupProgressBar() {
+    TimerSingleton.Instance.stop('progressBar');
+
+    this.progressValue = 100;
+    const progressTicksNumber = Math.floor(this.waitMillisAfterSwitchCell/1000.0);
+    const progressValueDelta = 100.0/progressTicksNumber;
+    const progressTicksMillis = Math.floor(this.waitMillisAfterSwitchCell/progressTicksNumber);
+
+    TimerSingleton.Instance.repeatNTimes('progressBar', progressTicksNumber, progressTicksMillis,
+      () => { 
+        this.progressValue-=progressValueDelta;
+        console.log(this.progressValue);
+      });
+
+  }
+
+  restartTimer(waitBeforeStart = false) {
     this.conway.stopIterate();
 
     TimerSingleton.Instance.stop('startConwayIteration');
 
     const startIterate = this.conway.startIterate.bind(this.conway, this.waitMillisBetweenIterations);
 
-    TimerSingleton.Instance.once('startConwayIteration', this.waitMillisAfterSwitchCell, startIterate);
+    TimerSingleton.Instance.once('startConwayIteration', waitBeforeStart ? this.waitMillisAfterSwitchCell : 0, startIterate);
   }
 
   getCSSClass(r: number, c: number) {

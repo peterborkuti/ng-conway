@@ -1,10 +1,12 @@
+import { typeWithParameters } from '@angular/compiler/src/render3/util';
+
 class Timer {
-  constructor (public readonly jsTimerId, public readonly once = false) {}
+  constructor (public readonly jsTimerId, public fireNumber = -1) {}
 }
 
 export class TimerSingleton {
     private static _instance: TimerSingleton = new TimerSingleton();
-    private timers = {};
+    private timers: {[key: string]: Timer} = {};
 
     private constructor() {}
 
@@ -13,39 +15,52 @@ export class TimerSingleton {
     }
 
     public repeat(timerId: string, intervalInMillis: number, callBack: () => void) {
-      this.startTimer(timerId, intervalInMillis, callBack);
+      this.startTimer(timerId, intervalInMillis, callBack, -1);
+    }
+
+    public repeatNTimes(timerId: string, n: number, intervalInMillis: number, callBack: () => void) {
+      this.startTimer(timerId, intervalInMillis, callBack, n);
     }
 
     public once(timerId: string, intervalInMillis: number, callBack: () => void) {
-      this.startTimer(timerId, intervalInMillis, callBack, true);
+      this.startTimer(timerId, intervalInMillis, callBack, 1);
     }
 
-    private startTimer(timerId: string, intervalInMillis: number, callBack: () => void, once = false) {
-      if (!this.timers[timerId]) {
-        let jsTimerId;
+    private startTimer(timerId: string, intervalInMillis: number, callBack: () => void, number = -1) {
+      if (this.timers[timerId]) {
+        this.stop(timerId);
+      }
 
-        if (once) {
-          const wrappedCallBack = () => (delete this.timers[timerId], callBack());
+      const wrappedCallBack = () => {
+        const timer = this.timers[timerId];
 
-          jsTimerId = setTimeout(wrappedCallBack, intervalInMillis);
+        if (!timer) return;
+
+        if (timer.fireNumber > -1) {
+          timer.fireNumber--;
+        }
+        if (timer.fireNumber === 0) {
+          this.stop(timerId);
+        }
+        callBack()
+      };
+
+      let jsTimerId;
+
+      if (number > 0) {
+          jsTimerId = setInterval(wrappedCallBack, intervalInMillis);
         } else {
           jsTimerId = setInterval(callBack, intervalInMillis);
         }
 
-        this.timers[timerId] = new Timer(jsTimerId, once);
-      }
+      this.timers[timerId] = new Timer(jsTimerId, number);
     }
 
     public stop(timerId: string) {
       if (this.timers[timerId]) {
         const jsTimerId = this.timers[timerId].jsTimerId;
-        const once = this.timers[timerId].once;
 
-        if (once) {
-          clearTimeout(jsTimerId);
-        } else {
-          clearInterval(jsTimerId);
-        }
+        clearInterval(jsTimerId);
 
         delete this.timers[timerId];
       }

@@ -10,3 +10,5 @@
 
 <app-iteration-speed (speedChange)="speedChanged($event)"></app-iteration-speed>
 
+<mat-progress-bar *ngIf="progressValue > 0" mode="determinate" [value]="progressValue"></mat-progress-bar>
+
