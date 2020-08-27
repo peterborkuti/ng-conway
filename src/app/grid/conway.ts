@@ -16,7 +16,14 @@ export function NewCellValue(isAlive: boolean, neighbours: number): boolean {
 }
 
 export class Conway {
+  private counter = 0;
+  private hook: Function = () => {};
+
   constructor (public grid: Grid) {
+  }
+
+  setHook(hook: Function) {
+    this.hook = hook;
   }
 
   startIterate(timeout: number) {
@@ -29,7 +36,8 @@ export class Conway {
   }
 
   public iterate() {
-    console.log('Iterate');
+    this.counter++;
+
     const newGrid = new Grid(this.grid.rows, this.grid.cols);
     for (let r = 0; r < this.grid.rows; r++) {
       for (let c = 0; c < this.grid.cols; c++) {
@@ -41,10 +49,12 @@ export class Conway {
       }
     }
 
-    if (this.grid.equals(newGrid)) {
-      this.stopIterate();
-    }
+    //if (this.grid.equals(newGrid)) {
+    //  this.stopIterate();
+    //}
 
     this.grid.setWithGrid(newGrid);
+
+    this.hook(this.grid, this.counter);
   }
 }

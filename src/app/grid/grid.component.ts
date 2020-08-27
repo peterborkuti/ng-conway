@@ -2,6 +2,7 @@ import { Component, OnInit, Input, NgZone } from '@angular/core';
 import { Grid } from './grid';
 import { Conway } from './conway';
 import { TimerSingleton } from './timer';
+import { SetupForm } from '../setup-form/setup-form';
 
 @Component({
   selector: 'app-grid',
@@ -25,6 +26,20 @@ export class GridComponent implements OnInit {
     this.conway = new Conway(this.grid);
 
     this.conway.startIterate(this.waitMillisBetweenIterations);
+  }
+
+  formChanged(form: SetupForm) {
+    const hook = !form.placeRandomCells ? () => {} : (grid: Grid, counter: number) => {
+      if (counter % form.steps == 0) {
+        const rownum = grid.rows;
+        const colnum = grid.cols;
+        for (let i = 0; i < form.cells; i++) {
+          grid.setCell(Math.floor(Math.random()*rownum), Math.floor(Math.random()*colnum), true);
+        }
+      }
+    }
+
+    this.conway.setHook(hook);
   }
 
   switchCell(r: number, c: number) {
