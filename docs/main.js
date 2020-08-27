@@ -82,7 +82,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _grid_grid_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./grid/grid.component */ "./src/app/grid/grid.component.ts");
 /* harmony import */ var _iteration_speed_iteration_speed_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./iteration-speed/iteration-speed.component */ "./src/app/iteration-speed/iteration-speed.component.ts");
 /* harmony import */ var _angular_material_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/slider */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/slider.js");
-/* harmony import */ var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/progress-bar */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js");
+/* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/toolbar.js");
+/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/checkbox.js");
+/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/progress-bar */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js");
+/* harmony import */ var _setup_form_setup_form_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./setup-form/setup-form.component */ "./src/app/setup-form/setup-form.component.ts");
+
+
+
+
+
 
 
 
@@ -99,27 +109,44 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
             _angular_material_slider__WEBPACK_IMPORTED_MODULE_6__["MatSliderModule"],
-            _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_7__["MatProgressBarModule"]
+            _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_11__["MatProgressBarModule"],
+            _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_7__["MatToolbarModule"],
+            _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_8__["MatCheckboxModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ReactiveFormsModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"],
+            _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatFormFieldModule"]
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
         _grid_grid_component__WEBPACK_IMPORTED_MODULE_4__["GridComponent"],
-        _iteration_speed_iteration_speed_component__WEBPACK_IMPORTED_MODULE_5__["IterationSpeedComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+        _iteration_speed_iteration_speed_component__WEBPACK_IMPORTED_MODULE_5__["IterationSpeedComponent"],
+        _setup_form_setup_form_component__WEBPACK_IMPORTED_MODULE_12__["SetupFormComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
         _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
         _angular_material_slider__WEBPACK_IMPORTED_MODULE_6__["MatSliderModule"],
-        _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_7__["MatProgressBarModule"]] }); })();
+        _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_11__["MatProgressBarModule"],
+        _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_7__["MatToolbarModule"],
+        _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_8__["MatCheckboxModule"],
+        _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ReactiveFormsModule"],
+        _angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"],
+        _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatFormFieldModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
                 declarations: [
                     _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
                     _grid_grid_component__WEBPACK_IMPORTED_MODULE_4__["GridComponent"],
-                    _iteration_speed_iteration_speed_component__WEBPACK_IMPORTED_MODULE_5__["IterationSpeedComponent"]
+                    _iteration_speed_iteration_speed_component__WEBPACK_IMPORTED_MODULE_5__["IterationSpeedComponent"],
+                    _setup_form_setup_form_component__WEBPACK_IMPORTED_MODULE_12__["SetupFormComponent"]
                 ],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                     _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
                     _angular_material_slider__WEBPACK_IMPORTED_MODULE_6__["MatSliderModule"],
-                    _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_7__["MatProgressBarModule"]
+                    _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_11__["MatProgressBarModule"],
+                    _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_7__["MatToolbarModule"],
+                    _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_8__["MatCheckboxModule"],
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_10__["ReactiveFormsModule"],
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"],
+                    _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatFormFieldModule"]
                 ],
                 providers: [],
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
@@ -159,6 +186,11 @@ function NewCellValue(isAlive, neighbours) {
 class Conway {
     constructor(grid) {
         this.grid = grid;
+        this.counter = 0;
+        this.hook = () => { };
+    }
+    setHook(hook) {
+        this.hook = hook;
     }
     startIterate(timeout) {
         const callBack = this.iterate.bind(this);
@@ -168,7 +200,7 @@ class Conway {
         _timer__WEBPACK_IMPORTED_MODULE_1__["TimerSingleton"].Instance.stop('conway');
     }
     iterate() {
-        console.log('Iterate');
+        this.counter++;
         const newGrid = new _grid__WEBPACK_IMPORTED_MODULE_0__["Grid"](this.grid.rows, this.grid.cols);
         for (let r = 0; r < this.grid.rows; r++) {
             for (let c = 0; c < this.grid.cols; c++) {
@@ -177,10 +209,11 @@ class Conway {
                 newGrid.setCell(r, c, NewCellValue(isAlive, numNeighbours));
             }
         }
-        if (this.grid.equals(newGrid)) {
-            this.stopIterate();
-        }
+        //if (this.grid.equals(newGrid)) {
+        //  this.stopIterate();
+        //}
         this.grid.setWithGrid(newGrid);
+        this.hook(this.grid, this.counter);
     }
 }
 
@@ -201,9 +234,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _grid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./grid */ "./src/app/grid/grid.ts");
 /* harmony import */ var _conway__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./conway */ "./src/app/grid/conway.ts");
 /* harmony import */ var _timer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./timer */ "./src/app/grid/timer.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _iteration_speed_iteration_speed_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../iteration-speed/iteration-speed.component */ "./src/app/iteration-speed/iteration-speed.component.ts");
-/* harmony import */ var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/progress-bar */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js");
+/* harmony import */ var _setup_form_setup_form_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../setup-form/setup-form.component */ "./src/app/setup-form/setup-form.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _iteration_speed_iteration_speed_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../iteration-speed/iteration-speed.component */ "./src/app/iteration-speed/iteration-speed.component.ts");
+/* harmony import */ var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/progress-bar */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/progress-bar.js");
+
 
 
 
@@ -213,11 +248,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const _c0 = function (a0) { return { "width": a0 }; };
-function GridComponent_tr_1_td_1_Template(rf, ctx) { if (rf & 1) {
+function GridComponent_tr_2_td_1_Template(rf, ctx) { if (rf & 1) {
     const _r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 6);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function GridComponent_tr_1_td_1_Template_div_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r9); const c_r6 = ctx.index; const r_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().index; const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r7.switchCell(r_r3, c_r6); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function GridComponent_tr_2_td_1_Template_div_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r9); const c_r6 = ctx.index; const r_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().index; const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r7.switchCell(r_r3, c_r6); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "\u00A0");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -229,17 +264,17 @@ function GridComponent_tr_1_td_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", ctx_r4.getCSSClass(r_r3, c_r6));
 } }
-function GridComponent_tr_1_Template(rf, ctx) { if (rf & 1) {
+function GridComponent_tr_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, GridComponent_tr_1_td_1_Template, 3, 4, "td", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, GridComponent_tr_2_td_1_Template, 3, 4, "td", 5);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const gridRow_r2 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", gridRow_r2);
 } }
-function GridComponent_mat_progress_bar_3_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "mat-progress-bar", 7);
+function GridComponent_mat_progress_bar_4_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "mat-progress-bar", 8);
 } if (rf & 2) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", ctx_r1.progressValue);
@@ -257,6 +292,18 @@ class GridComponent {
         this.grid = new _grid__WEBPACK_IMPORTED_MODULE_1__["Grid"](this.rows, this.cols);
         this.conway = new _conway__WEBPACK_IMPORTED_MODULE_2__["Conway"](this.grid);
         this.conway.startIterate(this.waitMillisBetweenIterations);
+    }
+    formChanged(form) {
+        const hook = !form.placeRandomCells ? () => { } : (grid, counter) => {
+            if (counter % form.steps == 0) {
+                const rownum = grid.rows;
+                const colnum = grid.cols;
+                for (let i = 0; i < form.cells; i++) {
+                    grid.setCell(Math.floor(Math.random() * rownum), Math.floor(Math.random() * colnum), true);
+                }
+            }
+        };
+        this.conway.setHook(hook);
     }
     switchCell(r, c) {
         this.restartTimer(true);
@@ -293,20 +340,23 @@ class GridComponent {
     }
 }
 GridComponent.ɵfac = function GridComponent_Factory(t) { return new (t || GridComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"])); };
-GridComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: GridComponent, selectors: [["app-grid"]], inputs: { rows: "rows", cols: "cols", waitMillisAfterSwitchCell: "waitMillisAfterSwitchCell", waitMillisBetweenIterations: "waitMillisBetweenIterations" }, decls: 4, vars: 2, consts: [[1, "table", "table-bordered"], [4, "ngFor", "ngForOf"], [3, "speedChange"], ["mode", "determinate", 3, "value", 4, "ngIf"], [3, "ngStyle", 4, "ngFor", "ngForOf"], [3, "ngStyle"], [3, "ngClass", "click"], ["mode", "determinate", 3, "value"]], template: function GridComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "table", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, GridComponent_tr_1_Template, 2, 1, "tr", 1);
+GridComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: GridComponent, selectors: [["app-grid"]], inputs: { rows: "rows", cols: "cols", waitMillisAfterSwitchCell: "waitMillisAfterSwitchCell", waitMillisBetweenIterations: "waitMillisBetweenIterations" }, decls: 5, vars: 2, consts: [[3, "changeForm"], [1, "table", "table-bordered"], [4, "ngFor", "ngForOf"], [3, "speedChange"], ["mode", "determinate", 3, "value", 4, "ngIf"], [3, "ngStyle", 4, "ngFor", "ngForOf"], [3, "ngStyle"], [3, "ngClass", "click"], ["mode", "determinate", 3, "value"]], template: function GridComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "setup-form", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("changeForm", function GridComponent_Template_setup_form_changeForm_0_listener($event) { return ctx.formChanged($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "app-iteration-speed", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("speedChange", function GridComponent_Template_app_iteration_speed_speedChange_2_listener($event) { return ctx.speedChanged($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "table", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, GridComponent_tr_2_Template, 2, 1, "tr", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, GridComponent_mat_progress_bar_3_Template, 1, 1, "mat-progress-bar", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "app-iteration-speed", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("speedChange", function GridComponent_Template_app_iteration_speed_speedChange_3_listener($event) { return ctx.speedChanged($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, GridComponent_mat_progress_bar_4_Template, 1, 1, "mat-progress-bar", 4);
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.grid.grid);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.progressValue > 0);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], _iteration_speed_iteration_speed_component__WEBPACK_IMPORTED_MODULE_5__["IterationSpeedComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgClass"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_6__["MatProgressBar"]], styles: [".table[_ngcontent-%COMP%] {\n  border: solid orange;\n  border-spacing: 1px;\n  border-collapse: separate;\n  width: 100%;\n\n}\n\n.table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  padding: 0px;\n  border: none;\n  border-spacing: 0px;\n}\n\n.cell-live[_ngcontent-%COMP%] {\n  background-color: green;\n}\n\n.cell-dead[_ngcontent-%COMP%] {\n  background-color: black;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ3JpZC9ncmlkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxvQkFBb0I7RUFDcEIsbUJBQW1CO0VBQ25CLHlCQUF5QjtFQUN6QixXQUFXOztBQUViOztBQUVBO0VBQ0UsWUFBWTtFQUNaLFlBQVk7RUFDWixtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSx1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSx1QkFBdUI7QUFDekIiLCJmaWxlIjoic3JjL2FwcC9ncmlkL2dyaWQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50YWJsZSB7XG4gIGJvcmRlcjogc29saWQgb3JhbmdlO1xuICBib3JkZXItc3BhY2luZzogMXB4O1xuICBib3JkZXItY29sbGFwc2U6IHNlcGFyYXRlO1xuICB3aWR0aDogMTAwJTtcblxufVxuXG4udGFibGUgdGQge1xuICBwYWRkaW5nOiAwcHg7XG4gIGJvcmRlcjogbm9uZTtcbiAgYm9yZGVyLXNwYWNpbmc6IDBweDtcbn1cblxuLmNlbGwtbGl2ZSB7XG4gIGJhY2tncm91bmQtY29sb3I6IGdyZWVuO1xufVxuXG4uY2VsbC1kZWFkIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG59XG4iXX0= */"] });
+    } }, directives: [_setup_form_setup_form_component__WEBPACK_IMPORTED_MODULE_4__["SetupFormComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], _iteration_speed_iteration_speed_component__WEBPACK_IMPORTED_MODULE_6__["IterationSpeedComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgClass"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_7__["MatProgressBar"]], styles: [".table[_ngcontent-%COMP%] {\n  border: solid orange;\n  border-spacing: 1px;\n  border-collapse: separate;\n  width: 100%;\n\n}\n\n.table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  padding: 0px;\n  border: none;\n  border-spacing: 0px;\n}\n\n.cell-live[_ngcontent-%COMP%] {\n  background-color: green;\n}\n\n.cell-dead[_ngcontent-%COMP%] {\n  background-color: black;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ3JpZC9ncmlkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxvQkFBb0I7RUFDcEIsbUJBQW1CO0VBQ25CLHlCQUF5QjtFQUN6QixXQUFXOztBQUViOztBQUVBO0VBQ0UsWUFBWTtFQUNaLFlBQVk7RUFDWixtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSx1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSx1QkFBdUI7QUFDekIiLCJmaWxlIjoic3JjL2FwcC9ncmlkL2dyaWQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50YWJsZSB7XG4gIGJvcmRlcjogc29saWQgb3JhbmdlO1xuICBib3JkZXItc3BhY2luZzogMXB4O1xuICBib3JkZXItY29sbGFwc2U6IHNlcGFyYXRlO1xuICB3aWR0aDogMTAwJTtcblxufVxuXG4udGFibGUgdGQge1xuICBwYWRkaW5nOiAwcHg7XG4gIGJvcmRlcjogbm9uZTtcbiAgYm9yZGVyLXNwYWNpbmc6IDBweDtcbn1cblxuLmNlbGwtbGl2ZSB7XG4gIGJhY2tncm91bmQtY29sb3I6IGdyZWVuO1xufVxuXG4uY2VsbC1kZWFkIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG59XG4iXX0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](GridComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -545,6 +595,63 @@ IterationSpeedComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
                 styleUrls: ['./iteration-speed.component.css']
             }]
     }], function () { return []; }, { speedChange: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }] }); })();
+
+
+/***/ }),
+
+/***/ "./src/app/setup-form/setup-form.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/setup-form/setup-form.component.ts ***!
+  \****************************************************/
+/*! exports provided: SetupFormComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetupFormComponent", function() { return SetupFormComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/checkbox */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/checkbox.js");
+
+
+
+
+class SetupFormComponent {
+    constructor(fb) {
+        this.fb = fb;
+        this.changeForm = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.enableForm = true;
+        this.form = this.fb.group({ cells: this.fb.control(10), steps: this.fb.control(10), placeRandomCells: this.fb.control(false) });
+    }
+    ngOnInit() {
+        this.form.valueChanges.subscribe(v => this.changeForm.emit(v));
+        this.form.controls.placeRandomCells.setValue(true);
+    }
+}
+SetupFormComponent.ɵfac = function SetupFormComponent_Factory(t) { return new (t || SetupFormComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"])); };
+SetupFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SetupFormComponent, selectors: [["setup-form"]], outputs: { changeForm: "changeForm" }, decls: 7, vars: 1, consts: [[3, "formGroup"], ["formControlName", "placeRandomCells"], ["matInput", "", "formControlName", "cells", "max", "20", "min", "1", "value", "10", "size", "2"], ["matInput", "", "formControlName", "steps", "max", "20", "min", "1", "value", "10", "size", "2"]], template: function SetupFormComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "form", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-checkbox", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Place");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "input", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, " random cells in every ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "input", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, " step.\n");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.form);
+    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_2__["MatCheckbox"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NldHVwLWZvcm0vc2V0dXAtZm9ybS5jb21wb25lbnQuY3NzIn0= */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SetupFormComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'setup-form',
+                templateUrl: './setup-form.component.html',
+                styleUrls: ['./setup-form.component.css']
+            }]
+    }], function () { return [{ type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] }]; }, { changeForm: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }] }); })();
 
